@@ -3,8 +3,8 @@ class Queue {
   // but try not not reference your old code in writing the new style.
   constructor() {
     this.head = 0;
-	this.end = 0;
-	this.storage = {};
+    this.end = 0;
+    this.storage = {};
   }
   size() {
     return Object.keys(this.storage).length;
@@ -12,7 +12,6 @@ class Queue {
   enqueue(value) {
     this.end++;
     this.storage[this.end.toString()] = value;
-	  
   }
   
   dequeue() {

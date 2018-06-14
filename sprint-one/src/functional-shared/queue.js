@@ -14,18 +14,18 @@ var queueMethods = {};
 
 queueMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
 queueMethods.enqueue = function(value) {
   this.end++;
   this.storage[this.end.toString()] = value;
-  return this.storage[this.end.toString()]
-}
+  return this.storage[this.end.toString()];
+};
 
 queueMethods.dequeue = function() {
   this.head++;
   var popVal = this.storage[this.head.toString()];
   delete this.storage[this.head.toString()];
   return popVal;
-}
+};
 
